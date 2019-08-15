@@ -179,9 +179,6 @@ img {
   font-size: 1.6rem;
   padding: 20px;
 }
-.wrapper {
-  margin: 0 10%;
-}
 header {
   border: dotted red;
   border-bottom: dashed grey;
@@ -190,21 +187,36 @@ header .top {
   border: solid blue;
   display: flex;
 }
-header .top h1 {
-  border: green solid;
-  width: 100%;
+@media (max-width:500px) {
+  header .top {
+    display: flex;
+    flex-direction: column;
+  }
 }
-header .top nav {
+header .top h1 {
+  display: flex;
+  border: solid yellow;
+  width: 50%;
+}
+@media (max-width:500px) {
+  header .top h1 {
+    display: flex;
+    text-align: center;
+  }
+}
+header .top h1 nav {
   border: solid red;
   width: 50%;
   display: flex;
   justify-content: flex-end;
   margin-left: 50%;
 }
-header .top nav a {
+header .top h1 nav a {
   display: flex;
   text-decoration: none;
-  justify-content: center;
+  justify-content: space-between;
+  color: black;
+  font-size: 1.5rem;
 }
 .home .welcome {
   border-bottom: dashed grey;
@@ -214,6 +226,12 @@ header .top nav a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+@media (max-width:500px) {
+  .home .content-section {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .home .content-section .text-content {
   width: 48%;
@@ -229,6 +247,12 @@ header .top nav a {
 .home .inverse-content {
   padding-bottom: 30px;
   border-bottom: 2px dashed #C0C0C0;
+}
+@media (max-width:500px) {
+  .home .inverse-content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 .home .inverse-content .text-content {
   padding-left: 1%;
@@ -250,6 +274,12 @@ header .top nav a {
   border-top: 2px dashed #C0C0C0;
   display: flex;
   justify-content: space-between;
+}
+@media (max-width:500px) {
+  .home .content-pick {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .home .content-pick .destination {
   width: 30%;

@@ -1,8 +1,6 @@
 
 
-.wrapper{
-    margin:0 10%;
-}
+
 
 header{
   border:dotted red;
@@ -11,11 +9,21 @@ header{
     .top{
       border:solid blue;
       display:flex;
+      
+      @media @mobile{
+        .phone-mix();
+      }//end of media
+      
 
         h1{
-          border:green solid;
-          width:100%;
-        }
+          display: flex;
+          border:solid yellow;
+          width:50%;
+
+            @media @mobile{
+                display:flex;
+                text-align: center;
+        }//end of media
 
         nav{
           border: solid red;
@@ -24,15 +32,19 @@ header{
           justify-content: flex-end;
           margin-left:50%;
           
+          
             a{
               display: flex;
               text-decoration: none;
-              justify-content:center;
+              justify-content:space-between;
+              color:black;
+              font-size: 1.5rem;
             }
-        }
+        }//end of nav
 
-    }
-  }
+    }//end of h1
+  }//end of top
+}//end of header
 
 
 
@@ -40,6 +52,9 @@ header{
 
 .home {
 
+
+
+  
   .welcome{
     .dashed();
   }
@@ -49,7 +64,10 @@ header{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
+    
+    @media @mobile{
+      .phone-mix();
+    }
    
     
     .text-content {
@@ -70,6 +88,11 @@ header{
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+      @media @mobile{
+        display:flex;
+        flex-direction: column-reverse;
+      }
 
     .text-content {
       padding-left: 1%;
@@ -97,12 +120,22 @@ header{
     display: flex;
     justify-content: space-between;
 
+    @media @mobile{
+      display:flex;
+      flex-direction:column;
+      
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+
+
       .btn{
         .button();
+        
       }
     }
   }
-}// home
+}
