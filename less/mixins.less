@@ -1,1 +1,19 @@
 // Mixins in here
+
+.flexBox(@justify:spaced-evenly, @align:center){
+    display:flex;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.button(@bg-color:#008080, @txt-color:white){
+     background: @bg-color;
+     color:@txt-color;
+     text-align: center;
+     .flexBox(center, center);
+     height:17%;
+     width:80%;
+     border-radius: 25px;
+     font-size: 1.6rem;
+     margin-bottom:15%;
+}
